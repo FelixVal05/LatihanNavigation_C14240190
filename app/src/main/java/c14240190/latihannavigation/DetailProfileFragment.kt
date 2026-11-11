@@ -46,6 +46,9 @@ class DetailProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding!!.tvParam.text = param1.toString()
+
+        val dataTerima = DetailProfileFragmentArgs.fromBundle(arguments as Bundle).dataSatu
+        binding!!.tvParamSafeArgs.text = dataTerima.toString()
     }
 
     companion object {
