@@ -48,8 +48,11 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding!!.buttonOpen.setOnClickListener {
+            val mBundle = Bundle()
+            mBundle.putString("param1","AMBO")
             findNavController().navigate(
-                R.id.action_profileFragment_to_detailProfileFragment
+                R.id.action_profileFragment_to_detailProfileFragment,
+                mBundle
             )
         }
     }
